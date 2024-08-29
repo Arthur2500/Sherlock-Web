@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherlock Web</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="home" class="center">
+        <div id="cobalt-main-box">
+            <div id="logo">
+                <span>Sherlock Web</span>
+            </div>
+            <div id="top">
+                <input type="text" id="username" placeholder="Enter username" />
+                <button id="search-btn">
+                    <span id="search-btn-text">Search</span>
+                    <span id="search-spinner" class="material-symbols-outlined hidden">progress_activity</span>
+                </button>
+            </div>
+            <div id="bottom">
+                <div class="switches">
+                    <label class="checkbox">
+                        <input type="checkbox" id="nsfw-checkbox">
+                        <span class="checkbox-label">NSFW</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="print-all-checkbox">
+                        <span class="checkbox-label">Print All</span>
+                    </label>
+                    <label class="checkbox">
+                        <select id="preset-select" class="preset-select">
+                            <option value="">Select Preset</option>
+                            <option value="preset1">Preset 1</option>
+                            <option value="preset2">Preset 2</option>
+                            <!-- Add more presets as needed -->
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div id="results-container" class="glass-bkg hidden">
+                <div id="results">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

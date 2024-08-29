@@ -1,0 +1,184 @@
+/* Base styles inspired by your provided cobalt CSS */
+
+:root {
+    --transparent: rgba(0, 0, 0, 0);
+    --border-10: 0.1rem solid var(--accent);
+    --inset-focus: 0 0 0 0.1rem var(--accent) inset;
+    --font-mono: 'Noto Sans Mono', 'Consolas', 'SF Mono', monospace;
+    --padding: 0.7rem;
+    --line-height: 1.65rem;
+    --gap: 0.5rem;
+    --padding-small: 0.5rem;
+}
+
+[data-theme="dark"] {
+    --accent: rgb(225, 225, 225);
+    --background: rgb(0, 0, 0);
+    --accent-button: rgb(25, 25, 25);
+    --glass: rgba(25, 25, 25, 0.85);
+    --accent-subtext: rgb(110, 110, 110);
+}
+
+[data-theme="light"] {
+    --accent: rgb(25, 25, 25);
+    --background: rgb(255, 255, 255);
+    --accent-button: rgb(232, 232, 232);
+    --glass: rgba(232, 232, 232, 0.85);
+    --accent-subtext: rgb(110, 110, 110);
+}
+
+*{
+    font-family: var(--font-mono);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: var(--background);
+    color: var(--accent);
+    user-select: none;
+    overflow: hidden;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#cobalt-main-box {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    margin-bottom: 1rem;
+}
+
+#top {
+    display: flex;
+    width: 100%;
+}
+
+#username {
+    flex-grow: 1;
+    padding: var(--padding);
+    border: var(--border-10);
+    background: var(--background);
+    color: var(--accent);
+    outline: none;
+    font-size: 1em;
+}
+
+#search-btn {
+    background: var(--accent-button);
+    border: var(--border-10);
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-btn-text {
+    padding: var(--padding);
+    font-size: 1.5em;
+}
+
+#search-spinner {
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#bottom {
+    margin-top: var(--gap);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.switches {
+    display: flex;
+}
+
+.checkbox {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    padding: var(--padding-small);
+    margin-right: var(--padding);
+    background: var(--accent-button);
+    border: var(--border-10);
+}
+
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox input[type="checkbox"]:checked + .checkbox-label {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.checkbox input[type="checkbox"]:checked + .checkbox-label::before {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.checkbox:has(input[type="checkbox"]:checked) {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.preset-select {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent-button);
+    color: var(--accent);
+    border: none;
+    font-size: 1em;
+}
+
+.preset-select select {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    padding-left: 0.5rem;
+}
+
+#results-container {
+    margin-top: var(--gap);
+    width: 100%;
+    height: 15rem;
+    overflow-y: auto;
+    border: var(--border-10);
+    background: var(--glass);
+    padding: var(--padding);
+    box-sizing: border-box;
+}
+
+#results {
+    white-space: pre-wrap;
+}
+
+::placeholder {
+    color: var(--accent-subtext);
+}
