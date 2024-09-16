@@ -28,7 +28,7 @@ docker-compose -f docker-compose.local.yml up -d --build
 Requirements:
 ```
 Node.js >= 16
-Sherlock
+Sherlock (https://github.com/sherlock-project/sherlock)
 ```
 
 Clone Repository
