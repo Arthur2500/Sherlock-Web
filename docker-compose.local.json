@@ -1,0 +1,10 @@
+services:
+  sherlock-web-local:
+    build: .
+    container_name: sherlock-web-local
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      SECURITY: disabled
+    restart: unless-stopped
