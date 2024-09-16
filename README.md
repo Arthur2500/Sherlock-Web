@@ -53,7 +53,7 @@ SECURITY=enabled node main.js
 
 ## Configuration
 `docker-compose.yml` Environment Settings:
-- `SECURITY: [enabled/disabled]`: Enable/Disable Security features such as Ratelimiting for API and Helmet header protection
+- `SECURITY: [enabled/disabled]`: Enable/Disable Security features such as Helmet header protection
 
 ## Screenshots
 <img width="1440" alt="Bildschirmfoto 2024-09-16 um 23 10 28" src="https://github.com/user-attachments/assets/449a29ab-0c26-4f1d-a8e4-b6d2775109fe">
