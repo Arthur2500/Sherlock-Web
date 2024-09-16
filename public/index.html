@@ -11,9 +11,9 @@
 
 <body>
     <div id="home" class="center">
-        <div id="cobalt-main-box">
+        <div id="main-box">
             <div id="logo">
-                <span>Sherlock Web</span>
+                <a href="/" class="logo">Sherlock Web</a>
             </div>
             <div id="top">
                 <input type="text" id="username" placeholder="Enter username" />
@@ -23,23 +23,29 @@
                 </button>
             </div>
             <div id="bottom">
-                <div class="switches">
-                    <label class="checkbox">
-                        <input type="checkbox" id="nsfw-checkbox">
-                        <span class="checkbox-label">NSFW</span>
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox" id="print-all-checkbox">
-                        <span class="checkbox-label">Print All</span>
-                    </label>
-                    <label class="checkbox">
-                        <select id="preset-select" class="preset-select">
-                            <option value="">Select Preset</option>
-                            <option value="preset1">Preset 1</option>
-                            <option value="preset2">Preset 2</option>
-                            <!-- Add more presets as needed -->
-                        </select>
-                    </label>
+                <div class="options">
+                    <div class="switches">
+                        <label class="checkbox">
+                            <input type="checkbox" id="nsfw-checkbox">
+                            <span class="checkbox-label">NSFW</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="print-all-checkbox">
+                            <span class="checkbox-label">Print All</span>
+                        </label>
+                        <label class="checkbox">
+                            <select id="preset-select" class="preset-select">
+                                <option value="">Select Preset</option>
+                                <option value="social media">Social Media</option>
+                                <option value="nsfw">NSFW</option>
+                                <option value="blog sites">Blog Sites</option>
+                            </select>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="csv-checkbox">
+                            <span class="checkbox-label">CSV</span>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div id="results-container" class="glass-bkg hidden">
@@ -48,6 +54,10 @@
             </div>
         </div>
     </div>
+
+    <footer id="footer">
+        <a href="/terms">Terms and Conditions</a> | <a href="/privacy">Privacy Policy</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>
