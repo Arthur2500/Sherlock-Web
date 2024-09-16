@@ -81,6 +81,7 @@ document.getElementById("search-btn").addEventListener("click", function() {
                 const a = document.createElement('a');
                 a.href = item.url; // Set the link's href attribute to the result URL
                 a.textContent = item.siteName; // Set the link text to the site name
+                a.innerHTML = a.textContent + "<span class=\"material-symbols-outlined\" style=\"vertical-align: middle; margin-left: 4px;\">link</span>"
                 a.target = '_blank'; // Open the link in a new tab
                 a.rel = 'noopener noreferrer'; // Security: prevent window.opener vulnerability
 
