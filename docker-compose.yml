@@ -1,0 +1,10 @@
+services:
+  sherlock-web:
+    image: ghcr.io/arthur2500/sherlock-web:latest
+    container_name: sherlock-web
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      SECURITY: enabled
+    restart: unless-stopped
