@@ -2,7 +2,6 @@ const express = require('express');
 const { exec } = require('child_process');
 const fs = require('fs');
 const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
 const os = require('os');
 const path = require('path');
 const validator = require('validator');
@@ -13,15 +12,6 @@ const port = process.env.PORT || 3000;
 // Use Helmet to set security-related HTTP headers
 if (process.env.SECURITY === 'enabled') {
     app.use(helmet());
-
-    // Apply rate limiting to all requests to prevent brute force and DOS attacks
-    const limiter = rateLimit({
-        windowMs: 5 * 60 * 1000, // 15-minute window
-        max: 100, // Maximum 100 requests per IP during the window
-        message: "Too many requests from this IP, please try again later."
-    });
-
-    app.use(limiter);
 }
 
 // Predefined presets mapping to specific categories of websites
