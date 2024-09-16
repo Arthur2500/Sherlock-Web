@@ -204,6 +204,16 @@ html, body {
     color: var(--background);
 }
 
+.checkbox:hover .preset-select {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.preset-select option {
+    background-color: var(--accent-button);
+    color: var(--accent);
+}
+
 #csv-btn:disabled {
     background: var(--accent-subtext);
     cursor: not-allowed;
