@@ -8,7 +8,7 @@ https://sherlock.ziemlich-schnell.de
 ## How to run:
 ### Use Prebuilt Image (Recommended)
 ```
-docker run --name convertz --env SECURITY=disabled --env API_KEY=none -d -p 3000:3000 ghcr.io/arthur2500/sherlock-web:latest 
+docker run --name sherlock-web --env SECURITY=disabled -d -p 3000:3000 ghcr.io/arthur2500/sherlock-web:latest 
 ```
 or
 ```
