@@ -56,4 +56,7 @@ SECURITY=enabled node main.js
 - `SECURITY: [enabled/disabled]`: Enable/Disable Security features such as Ratelimiting for API and Helmet header protection
 
 ## Screenshots
-![Screenshot 2024-08-20 215648](https://github.com/user-attachments/assets/a2d7979e-2f71-4f3f-9063-57128690e62a)
+<img width="1440" alt="Bildschirmfoto 2024-09-16 um 23 10 28" src="https://github.com/user-attachments/assets/449a29ab-0c26-4f1d-a8e4-b6d2775109fe">
+<img width="1440" alt="Bildschirmfoto 2024-09-16 um 23 11 15" src="https://github.com/user-attachments/assets/8696afa3-3b7b-48ec-b65e-e23c77d91af5">
+<img width="1440" alt="Bildschirmfoto 2024-09-16 um 23 13 12" src="https://github.com/user-attachments/assets/ecb33b61-2f30-4a00-8fc5-d50442ff8d6a">
+<img width="1440" alt="Bildschirmfoto 2024-09-16 um 23 12 55" src="https://github.com/user-attachments/assets/21fa7cfb-ad98-4435-b582-cf124114b953">
