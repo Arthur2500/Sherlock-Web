@@ -30,7 +30,7 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/arthur2500/convertz:dev
+          tags: ghcr.io/arthur2500/sherlock-web:dev
 
       - name: Image digest
         run: echo ${{ steps.build-and-push.outputs.digest }}
