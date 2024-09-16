@@ -1,5 +1,5 @@
 [![Docker Image CI](https://github.com/Arthur2500/Sherlock-Web/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Arthur2500/Sherlock-Web/actions/workflows/docker-image.yml)
-# Sherlock Web <img src="https://github.com/Arthur2500/Sherlock-Web/raw/dev/public/favicon.ico" alt="Icon" width="24"/>
+# Sherlock Web <img src="https://github.com/Arthur2500/Sherlock-Web/raw/main/public/favicon.ico" alt="Icon" width="24"/>
 A web interface for [Sherlock](https://github.com/sherlock-project/sherlock). All credits belong to them, this is just a simple frontend.
 
 ## Demo:
