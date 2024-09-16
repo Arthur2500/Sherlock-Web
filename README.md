@@ -1,4 +1,4 @@
-[![Dev Docker Image CI](https://github.com/Arthur2500/Sherlock-Web/actions/workflows/docker-image-dev.yml/badge.svg)](https://github.com/Arthur2500/Sherlock-Web/actions/workflows/docker-image-dev.yml)
+[![Docker Image CI](https://github.com/Arthur2500/ConvertZ/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Arthur2500/ConvertZ/actions/workflows/docker-image.yml)
 # Sherlock Web <img src="https://github.com/Arthur2500/Sherlock-Web/raw/dev/public/favicon.ico" alt="Icon" width="24"/>
 A web interface for [Sherlock](https://github.com/sherlock-project/sherlock). All credits belong to them, this is just a simple frontend.
 
@@ -8,7 +8,7 @@ https://sherlock.ziemlich-schnell.de
 ## How to run:
 ### Use Prebuilt Image (Recommended)
 ```
-docker run --name sherlock-web --env SECURITY=disabled -d -p 3000:3000 ghcr.io/arthur2500/sherlock-web:latest 
+docker run --name sherlock-web --env SECURITY=disabled -d -p 3000:3000 ghcr.io/arthur2500/sherlock-web:latest
 ```
 or
 ```
