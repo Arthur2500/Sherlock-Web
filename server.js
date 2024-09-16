@@ -11,16 +11,18 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Use Helmet to set security-related HTTP headers
-app.use(helmet());
+if (process.env.SECURITY === 'enabled') {
+    app.use(helmet());
 
-// Apply rate limiting to all requests to prevent brute force and DOS attacks
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15-minute window
-    max: 100, // Maximum 100 requests per IP during the window
-    message: "Too many requests from this IP, please try again later."
-});
+    // Apply rate limiting to all requests to prevent brute force and DOS attacks
+    const limiter = rateLimit({
+        windowMs: 5 * 60 * 1000, // 15-minute window
+        max: 100, // Maximum 100 requests per IP during the window
+        message: "Too many requests from this IP, please try again later."
+    });
 
-app.use(limiter);
+    app.use(limiter);
+}
 
 // Predefined presets mapping to specific categories of websites
 const presets = {
