@@ -201,6 +201,11 @@ html, body {
     color: var(--background);
 }
 
+.preset-select:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
 .preset-select:hover option {
     background-color: var(--accent);
     color: var(--background);
@@ -214,16 +219,6 @@ html, body {
 .preset-select option {
     background-color: var(--accent-button);
     color: var(--accent);
-}
-
-#csv-btn:disabled {
-    background: var(--accent-subtext);
-    cursor: not-allowed;
-}
-
-#csv-btn:hover:enabled {
-    background-color: var(--accent);
-    color: var(--background);
 }
 
 #results ul {
