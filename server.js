@@ -41,7 +41,7 @@ app.post('/search', (req, res) => {
     const { username, nsfw, printAll, csv, preset } = req.body;
 
     // Input validation for username
-    if (!username || typeof username !== 'string' || !/^[a-zA-Z0-9_-]+$/.test(username)) {
+    if (!username || typeof username !== 'string' || !/^[a-zA-Z0-9._@-]+$/.test(username)) {
         return res.status(400).json({ error: 'Invalid username. Only letters, numbers, underscores, and hyphens are allowed.' });
     }
 
