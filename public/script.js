@@ -24,7 +24,7 @@ document.getElementById("search-btn").addEventListener("click", function() {
     username = document.getElementById("username").value.trim();
 
     // Validate the username to ensure it only contains letters, numbers, underscores, and hyphens
-    if (!/^[a-zA-Z0-9_-]+$/.test(username)) {
+    if (!/^[a-zA-Z0-9._@-]+$/.test(username)) {
         alert("Invalid username format. Only letters, numbers, underscores, and hyphens are allowed.");
         return; // Exit if the username is invalid
     }
