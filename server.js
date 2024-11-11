@@ -11,7 +11,23 @@ const port = process.env.PORT || 3000;
 
 // Use Helmet to set security-related HTTP headers
 if (process.env.SECURITY === 'enabled') {
-    app.use(helmet());
+    app.use(
+        helmet({
+            contentSecurityPolicy: {
+                useDefaults: true,
+                directives: {
+                    'script-src': [
+                        "'self'",
+                        'https://static.cloudflareinsights.com',
+                    ],
+                    'connect-src': [
+                        "'self'",
+                        'https://static.cloudflareinsights.com',
+                    ],
+                },
+            },
+        })
+    );
 }
 
 // Predefined presets mapping to specific categories of websites
